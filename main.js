@@ -24,7 +24,7 @@ scene.add(directionalLight);
 // === GLB 로드 ===
 const loader = new GLTFLoader();
 loader.load(
-  './room.glb',
+  'room.glb',
   gltf => {
     gltf.scene.scale.set(100, 100, 100);
     scene.add(gltf.scene);
@@ -90,6 +90,7 @@ window.addEventListener('resize', () => {
   camera.updateProjectionMatrix();
   renderer.setSize(window.innerWidth, window.innerHeight);
 });
+
 
 
 
