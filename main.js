@@ -12,7 +12,9 @@ const camera = new THREE.PerspectiveCamera(
   1000
 );
 
-camera.rotation.y = Math.PI;    // y축 기준으로 180도 회전
+// 🔥 여기에 추가
+camera.position.set(0, 1.6, 3); // 사람 키 높이에서 약간 뒤로
+camera.rotation.y = Math.PI;    // 180도 회전 (반대 방향 보기)
 
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
@@ -93,6 +95,7 @@ window.addEventListener('resize', () => {
   camera.updateProjectionMatrix();
   renderer.setSize(window.innerWidth, window.innerHeight);
 });
+
 
 
 
