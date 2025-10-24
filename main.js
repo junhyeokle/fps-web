@@ -11,6 +11,9 @@ const camera = new THREE.PerspectiveCamera(
   0.1,
   1000
 );
+
+camera.rotation.y = Math.PI;    // y축 기준으로 180도 회전
+
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
@@ -90,6 +93,7 @@ window.addEventListener('resize', () => {
   camera.updateProjectionMatrix();
   renderer.setSize(window.innerWidth, window.innerHeight);
 });
+
 
 
 
