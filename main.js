@@ -40,6 +40,7 @@ loader.load(
 const controls = new PointerLockControls(camera, document.body);
 scene.add(controls.getObject());
 controls.pointerSpeed = 0.5; // 🔥 마우스 감도 절반으로 줄임
+controls.getObject().rotation.y = -Math.PI / 2;
 
 // 마우스 클릭 시 포인터 잠금
 document.body.addEventListener('click', () => {
@@ -91,6 +92,7 @@ window.addEventListener('resize', () => {
   camera.updateProjectionMatrix();
   renderer.setSize(window.innerWidth, window.innerHeight);
 });
+
 
 
 
